@@ -17,6 +17,10 @@ query ($org: String!, $endCursor: String) {
           login
           name
           email
+          location
+          url
+          bio
+          twitterUsername
         }
       }
       pageInfo {
@@ -30,7 +34,7 @@ query ($org: String!, $endCursor: String) {
 
 TEMPLATE='
   {{- range .data.organization.membersWithRole.edges -}}
-    {{- tablerow (autocolor "green" .node.login) .node.name (autocolor "yellow+h" .node.email) "" -}}
+    {{- tablerow (autocolor "green" .node.login) .node.name (autocolor "yellow+h" .node.email) .node.location .node.url .node.twitterUsername (autocolor "blue" .node.bio) "" -}}
   {{- end -}}
 '
 
