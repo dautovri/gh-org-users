@@ -1,13 +1,15 @@
 # GH CLI extension to list all GutHub Org users
 
+Fork from  yermulnik/gh-org-users 
+
 Installation:
 ```shell
-gh extension install yermulnik/gh-org-users
+gh extension install dautovri/gh-org-users
 ```
 
 Upgrade:
 ```shell
-gh extension upgrade yermulnik/gh-org-users
+gh extension upgrade dautovri/gh-org-users
 ```
 
 Usage:
